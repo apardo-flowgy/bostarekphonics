@@ -118,19 +118,22 @@
       line-height: 1;
     }
 
-    /* "Bostarek" — small qualifier above */
+    /* "Bostarek" — qualifier above; individual letter colours set via spans */
     .brand-qualifier {
-      font-size: clamp(0.9rem, 2.5vw, 1.4rem);
+      font-size: clamp(1.15rem, 3.2vw, 1.9rem);
       font-weight: 400;
-      color: var(--yellow);
       letter-spacing: 0.50em;
       text-transform: uppercase;
     }
 
-    /* "Phonics" — the main visual headline */
+    /* B, O, E, K → gold; S, T, A, R → same beige as "phonics" */
+    .q-gold  { color: var(--yellow); }
+    .q-beige { color: var(--beige); }
+
+    /* "phonics" — the main visual headline (slightly less bold than before) */
     .brand-main {
       font-size: clamp(4.8rem, 15vw, 9.5rem);
-      font-weight: 700;
+      font-weight: 600;
       color: var(--beige);
       letter-spacing: -0.025em;
       text-shadow:
@@ -418,8 +421,8 @@
       "Bostarek" is the small qualifier; "Phonics" is the dominant headline.
     -->
     <div class="brand-lockup" aria-label="Bostarek Phonics">
-      <p class="brand-qualifier" aria-hidden="true">Bostarek</p>
-      <h1 class="brand-main">Phonics</h1>
+      <p class="brand-qualifier" aria-hidden="true"><span class="q-gold">B</span><span class="q-gold">o</span><span class="q-beige">s</span><span class="q-beige">t</span><span class="q-beige">a</span><span class="q-beige">r</span><span class="q-gold">e</span><span class="q-gold">k</span></p>
+      <h1 class="brand-main">phonics</h1>
     </div>
 
     <p class="hero-subtitle">
@@ -483,7 +486,7 @@
           <line x1="9.5" y1="22" x2="14.5" y2="22"/>
         </svg>
         <div class="card-title">The Program</div>
-        <div class="card-body">Overview of the Bostarek method and the research behind it</div>
+        <div class="card-body">An overview of the Bostarek method and the research behind it</div>
       </article>
 
       <!-- 2 · Decodable Readers — stacked books -->
@@ -496,21 +499,18 @@
           <rect x="7"  y="6.5"  width="10" height="4"   rx="1.5"/>
         </svg>
         <div class="card-title">Decodable Readers</div>
-        <div class="card-body">A catalogue of books written specifically for the program</div>
+        <div class="card-body">A catalogue of books written and illustrated specifically for the program</div>
       </article>
 
-      <!-- 3 · Teachers — flashcard + 's' + star -->
+      <!-- 3 · Teachers — star icon -->
       <article class="preview-card">
         <svg class="card-icon" viewBox="0 0 24 24" fill="none"
              stroke="currentColor" stroke-width="2"
              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <rect x="7" y="4"  width="13" height="11" rx="2"/>
-          <rect x="4" y="8"  width="13" height="11" rx="2"/>
-          <path d="M8.5 15c0-.9.55-1.4 1.4-1.4s1.6.45 1.6 1.2c0 .75-.9 1.05-1.9 1.4"/>
-          <path d="M15 9.5l.3.9.9.3-.9.3-.3.9-.3-.9-.9-.3.9-.3z"/>
+          <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
         </svg>
         <div class="card-title">For Teachers</div>
-        <div class="card-body">Classroom resources, lesson plans, and teacher training</div>
+        <div class="card-body">Classroom resources and the Teacher's Handbook on what to teach at each step of the way</div>
       </article>
 
       <!-- 4 · Families — house -->
@@ -522,7 +522,7 @@
           <path d="M5 10.5V19.5a.5.5 0 00.5.5H9.5v-5.5h5V20h4a.5.5 0 00.5-.5v-9"/>
         </svg>
         <div class="card-title">For Families</div>
-        <div class="card-body">At-home practice activities to reinforce classroom learning</div>
+        <div class="card-body">Audio-visual resources for more input and practice at home</div>
       </article>
 
       <!-- 5 · Schools — gift box -->
@@ -537,78 +537,13 @@
           <path d="M12 7c0-3.5 4-4 4-1.8S13.5 7 12 7z"/>
         </svg>
         <div class="card-title">School Packages</div>
-        <div class="card-body">Complete bundles for schools plus individual resources for home</div>
+        <div class="card-body">Teacher training and complete bundles for schools</div>
       </article>
 
     </div>
   </div>
 </section>
 
-
-<!-- ════════════════════════════════ PLACEHOLDER · Program Overview -->
-<section class="section section-placeholder" id="program" aria-labelledby="prog-hdg">
-  <div class="container">
-    <div class="placeholder-box">
-      <span class="placeholder-chip">Coming soon</span>
-      <h2 class="placeholder-title" id="prog-hdg">Program Overview</h2>
-      <p class="placeholder-desc">An explanation of the Bostarek Phonics approach — what it is, who it's for, and how it works in the classroom and at home.</p>
-      <div class="placeholder-skeleton">
-        <div class="skel-block"></div>
-        <div class="skel-block"></div>
-        <div class="skel-block"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════════════════ PLACEHOLDER · Research -->
-<section class="section section-placeholder" id="research" aria-labelledby="res-hdg">
-  <div class="container">
-    <div class="placeholder-box">
-      <span class="placeholder-chip">Coming soon</span>
-      <h2 class="placeholder-title" id="res-hdg">Research</h2>
-      <p class="placeholder-desc">The evidence base behind systematic phonics for EFL young learners — reading science, classroom research, and methodology.</p>
-      <div class="placeholder-skeleton">
-        <div class="skel-block"></div>
-        <div class="skel-block"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════════════════ PLACEHOLDER · Teaching Resources -->
-<section class="section section-placeholder" id="resources" aria-labelledby="tlr-hdg">
-  <div class="container">
-    <div class="placeholder-box">
-      <span class="placeholder-chip">Coming soon</span>
-      <h2 class="placeholder-title" id="tlr-hdg">Teaching Resources</h2>
-      <p class="placeholder-desc">A preview of all materials for teachers and families — classroom tools, decodable readers, and at-home practice packs.</p>
-      <div class="placeholder-skeleton">
-        <div class="skel-block"></div>
-        <div class="skel-block"></div>
-        <div class="skel-block"></div>
-        <div class="skel-block"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════════════════ PLACEHOLDER · Shop -->
-<section class="section section-placeholder" id="shop" aria-labelledby="shop-hdg">
-  <div class="container">
-    <div class="placeholder-box">
-      <span class="placeholder-chip">Coming soon</span>
-      <h2 class="placeholder-title" id="shop-hdg">Shop</h2>
-      <p class="placeholder-desc">School packages · Individual home resources · Decodable readers catalogue · Teacher training</p>
-      <div class="placeholder-skeleton">
-        <div class="skel-block"></div>
-        <div class="skel-block"></div>
-        <div class="skel-block"></div>
-        <div class="skel-block"></div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ═══════════════════════════════════════════════════════ FOOTER -->
 <footer>
